@@ -1,30 +1,30 @@
 import React from 'react';
-
+// import {withRouter} from 'react-router';
 
 function SmurfForm(props) {
-    const handleClick = ev => {
-        ev.preventDefault();
-        props.addSmurf();
-        props.history.push('/');
+    const handleClick = e => {
+        e.preventDefault();
+        props.addNewSmurf();
+        // props.history.push('/');
     }
 
     return (
         <div>
-            <form action=''>
+            <form>
                 <br />
                 <input
                     type="text"
                     name="name"
-                    onChange={props.changeHandler}
                     placeholder="Name"
+                    onChange={props.changeHandler}
                     value={props.smurf.name}
                 />
 
                 <input 
                     type="text"
-                    name="name"
-                    onChange={props.changeHandler}
-                    placeholder="smurf"
+                    name="age"
+                    placeholder="age"
+                    onChange={props.changeHandler}           
                     value={props.smurf.age}
                 />
 
@@ -34,4 +34,5 @@ function SmurfForm(props) {
     )
 }
 
-export default SmurfForm
+// export default withRouter(SmurfForm);
+export default SmurfForm;

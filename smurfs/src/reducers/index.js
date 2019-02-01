@@ -9,17 +9,17 @@ import {
   SMURF_ADD,
   SMURF_ADD_SUCCESS,
   SMURF_ADD_ERROR
-} from "../actions/index"
+} from "../actions/index";
 
 
 //  Your initial/default state for this project could *Although does not have to* look a lot like this
  const initialState= {
    smurfs: [],
-   fetchingSmurfs: false,
-   addingSmurf: false,
-   updatingSmurf: false,
-   deletingSmurf: false,
-   error: null
+  //  fetchingSmurfs: false,
+  //  addingSmurf: false,
+  //  updatingSmurf: false,
+  //  deletingSmurf: false,
+  //  error: null
  }
 /*
   You'll only need one smurf reducer for this project.
@@ -29,32 +29,38 @@ import {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-const smurfReducer = (state = initialState, action) => {
+const smurfs = (state = initialState, action) => {
   switch(action.type) {
-    case SMURF_FETCH:
-      return {
-        ...state,
-        error: '',
-        fetchingSmurfs: true,
-      }
+    // case SMURF_FETCH:
+    //   return {
+    //     ...state,
+    //     error: '',
+    //     fetchingSmurfs: true,
+    //   }
     case SMURF_FETCH_SUCCESS:
       return {
         ...state,
-        error: '',
+        // error: '',
         smurfs: action.payload,
         // fetchingSmurfs: false,
       }
-    // case SMURF_ADD_SUCCESS:
+    // case SMURF_ADD:
     //   return {
     //     ...state,
-    //     addingSmurf: false,
-    //     smurfs: action.payload,
-    //     error: '',
-
+    //     addingSmurf: true,
+    //     error: ''
     //   }
+    case SMURF_ADD_SUCCESS:
+      return {
+        ...state,
+        // addingSmurf:false,
+        smurfs: action.payload,
+        // error: '',
+
+      }
     default: 
       return state;
   }
 }
 
-export default smurfReducer;
+export default smurfs;
