@@ -23,8 +23,28 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+==============================================================================================================================
+Actions are a way to modify state.  They contain action types and the data associated with that type. Reducers are functions that represent a changed state that connects actions to the store.  The store contains the entire state of the application.
+==============================================================================================================================
+
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+====================================================================================================================================
+Application state is global and component state is local. Application state will hold your inital data that is the single source of trute. Component state holds the data that is passed down to it's children componetns and may not be the same data across different components.  
+====================================================================================================================================
+
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+==============================================================================================================================
+Redux thunk is a middleware that is basically a function that is returned by another funciton.  It looks at the action passed and will either forward it to a reducer or invoke the dispatch funciton.  
+==============================================================================================================================
+
+
+
+
 
 ## Project Set Up
 
