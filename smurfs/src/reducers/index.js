@@ -9,7 +9,7 @@ import {
   SMURF_ADD,
   SMURF_ADD_SUCCESS,
   SMURF_ADD_ERROR
-} from "../Actions"
+} from "../actions/index"
 
 
 //  Your initial/default state for this project could *Although does not have to* look a lot like this
@@ -42,16 +42,18 @@ const smurfReducer = (state = initialState, action) => {
         ...state,
         error: '',
         smurfs: action.payload,
-        fetchingSmurfs: false,
+        // fetchingSmurfs: false,
       }
-    case SMURF_ADD_SUCCESS:
-      return {
-        ...state,
-        addingSmurf: false,
-        smurfs: action.payload,
-        error: '',
+    // case SMURF_ADD_SUCCESS:
+    //   return {
+    //     ...state,
+    //     addingSmurf: false,
+    //     smurfs: action.payload,
+    //     error: '',
 
-      }
+    //   }
+    default: 
+      return state;
   }
 }
 
