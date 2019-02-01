@@ -11,7 +11,7 @@ function SmurfForm(props) {
     return (
         <div>
             <form>
-                <br />
+               
                 <input
                     type="text"
                     name="name"
@@ -23,9 +23,17 @@ function SmurfForm(props) {
                 <input 
                     type="text"
                     name="age"
-                    placeholder="age"
+                    placeholder="Age"
                     onChange={props.changeHandler}           
                     value={props.smurf.age}
+                />
+
+                <input 
+                    type="text"
+                    name="height"
+                    placeholder="Height"
+                    onChange={props.changeHandler}           
+                    value={props.smurf.height}
                 />
 
                 <button onClick={handleClick}>Add a smurf with just a click of this button!</button>

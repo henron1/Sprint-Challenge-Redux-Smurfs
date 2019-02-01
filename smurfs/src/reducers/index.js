@@ -14,7 +14,7 @@ import {
 
 //  Your initial/default state for this project could *Although does not have to* look a lot like this
  const initialState= {
-   smurfs: [],
+   smurfs: []
   //  fetchingSmurfs: false,
   //  addingSmurf: false,
   //  updatingSmurf: false,
@@ -44,12 +44,12 @@ const smurfs = (state = initialState, action) => {
         smurfs: action.payload,
         // fetchingSmurfs: false,
       }
-    // case SMURF_ADD:
-    //   return {
-    //     ...state,
-    //     addingSmurf: true,
-    //     error: ''
-    //   }
+    case SMURF_ADD:
+      return {
+        ...state,
+        addingSmurf: true,
+        error: ''
+      }
     case SMURF_ADD_SUCCESS:
       return {
         ...state,

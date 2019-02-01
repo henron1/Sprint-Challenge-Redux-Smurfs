@@ -13,7 +13,8 @@ class FormView extends React.Component {
     state ={
         smurf: {
             name: '',
-            age: ''
+            age: '',
+            height:''
         }
     };
 
