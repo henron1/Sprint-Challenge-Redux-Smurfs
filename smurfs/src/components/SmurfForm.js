@@ -5,7 +5,7 @@ function SmurfForm(props) {
     const handleClick = e => {
         e.preventDefault();
         props.addNewSmurf();
-        // props.history.push('/');
+        // props.history.push();
     }
 
     return (

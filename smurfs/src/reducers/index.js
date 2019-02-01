@@ -9,7 +9,7 @@ import {
   SMURF_ADD,
   SMURF_ADD_SUCCESS,
   SMURF_ADD_ERROR
-} from "../actions/index";
+} from "../actions";
 
 
 //  Your initial/default state for this project could *Although does not have to* look a lot like this

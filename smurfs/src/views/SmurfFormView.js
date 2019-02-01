@@ -1,6 +1,6 @@
 import React from 'react';
 import SmurfForm from '../components/SmurfForm';
-import  connect  from 'react-redux';
+import {connect}   from 'react-redux';
 import { addSmurf } from '../actions/index';
 
 // const newSmurfInfo = {
@@ -28,11 +28,12 @@ class FormView extends React.Component {
 
     addNewSmurf = () => {
         this.props.addSmurf(this.state.smurf);
+        this.setState({smurf:''})
     }
 
-    // addNewSmurf = e => {
-    //     e.preventDefault();
-    //     this.props.addNewSmurf(this.state.smurf)
+    // addNewSmurf = () => {
+    //     // e.preventDefault();
+    //     this.props.addSmurf(this.state.smurf)
     //     this.setState({
     //         smurf: {
     //             name:'',
@@ -47,7 +48,7 @@ class FormView extends React.Component {
                 changeHandler={this.changeHandler}
                 smurf={this.state.smurf}
             />
-        )
+        );
     }
 }
 
